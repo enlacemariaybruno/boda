@@ -82,7 +82,9 @@ function playMusic() {
 
 function revealContent() {
   if (!opened) return;
-  window.scrollTo({ top: 150, behavior: 'smooth' });
+  overlay.classList.add('dismissed');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  updateReveal();
 }
 
 function handleScroll() {
