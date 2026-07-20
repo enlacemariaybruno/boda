@@ -786,6 +786,7 @@ main {
   vertical-align: -0.15em;
   margin-left: 0.3rem;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 .rsvp-confirm-icon path {
