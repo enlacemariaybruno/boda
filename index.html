@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>María & Bruno · 17.10.2026</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="no-scroll">
+
+  <!-- SOBRE -->
+  <div class="envelope-overlay" id="envelopeOverlay">
+    <div class="envelope-wrap">
+      <p class="envelope-sender">María <span class="amp">&amp;</span> Bruno</p>
+      <div class="envelope" id="envelope">
+
+        <!-- Tarjeta que sale del sobre -->
+        <div class="card" id="card">
+          <div class="card-content">
+            <p class="eyebrow">Nos casamos</p>
+            <h1 class="names">María <span class="amp">&amp;</span> Bruno</h1>
+            <div class="divider"></div>
+            <p class="card-date">17 de octubre de 2026</p>
+            <p class="card-time">17:30 h</p>
+            <p class="card-place">Parroquia de la Purísima Concepción</p>
+            <p class="card-place">Hacienda Torrecuadro</p>
+          </div>
+        </div>
+
+        <!-- Cuerpo y solapa del sobre -->
+        <img class="envelope-body" src="assets/img/sobre-cuerpo.avif" alt="">
+        <div class="envelope-flap" id="envelopeFlap">
+          <img class="flap-front" src="assets/img/sobre-solapa-exterior.avif" alt="">
+          <div class="flap-back-position">
+            <img class="flap-back" src="assets/img/sobre-solapa-interior.avif" alt="">
+          </div>
+
+          <div class="seal" aria-hidden="true">
+            <img src="assets/img/sello.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <p class="tap-hint" id="tapHint">
+        <span>Toca para abrir</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 19V5" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M6 11l6-6 6 6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </p>
+    </div>
+
+    <button class="scroll-hint hidden" id="scrollHint" aria-label="Continuar">
+      <span>Desliza para descubrir más</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="mainContent">
+    <div class="decorative-flowers">
+      <img src="assets/img/ilustracion-flores-1.svg" alt="Decoración floral">
+    </div>
+
+    <section class="section locations-section" id="ubicaciones">
+      <h2 class="section-title">Os esperamos aquí</h2>
+
+      <div class="location-cards">
+        <div class="location-card reveal reveal-left">
+          <span class="location-icon">
+            <img src="assets/img/ilustracion-iglesia.avif" alt="" loading="lazy">
+          </span>
+          <h3>Ceremonia</h3>
+          <p>Parroquia de la Purísima<br>Concepción</p>
+          <p class="location-sub">Huelva</p>
+          <p class="location-time">17:30 h</p>
+          <p class="location-note">Se ruega puntualidad, os esperamos 10 minutos antes</p>
+          <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+la+Pur%C3%ADsima+Concepci%C3%B3n+Huelva" target="_blank" rel="noopener">Ver mapa</a>
+        </div>
+
+        <div class="location-card reveal reveal-right">
+          <span class="location-icon">
+            <img src="assets/img/ilustracion-hacienda.avif" alt="" loading="lazy">
+          </span>
+          <h3>Celebración</h3>
+          <p>Hacienda Torrecuadro</p>
+          <p class="location-sub">Hinojos, Huelva</p>
+          <p class="location-time">19:30 h</p>
+          <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=Hacienda+Torrecuadro+Hinojos" target="_blank" rel="noopener">Ver mapa</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rsvp-section" id="rsvp">
+      <h2 class="section-title">¿Nos acompañáis?</h2>
+      <p class="rsvp-intro">Nos haría muchísima ilusión compartir este día con vosotros. Por favor, confirmad vuestra asistencia lo antes posible.</p>
+
+      <form id="rsvpForm" class="rsvp-form reveal reveal-up">
+
+          <fieldset class="field field-radio">
+            <legend>¿Asistirás?</legend>
+            <label><input type="radio" name="asistencia" value="si" required> Sí, allí estaré</label>
+            <label><input type="radio" name="asistencia" value="no"> No podré asistir</label>
+          </fieldset>
+
+        <label class="field">
+          <span>Nombre y apellidos</span>
+          <input type="text" name="nombre" required placeholder="Tu nombre completo">
+        </label>
+
+        <fieldset class="field field-radio">
+          <legend>¿Vienes acompañado/a?</legend>
+          <label><input type="radio" name="acompanado" value="si"> Sí</label>
+          <label><input type="radio" name="acompanado" value="no"> No</label>
+        </fieldset>
+
+        <label class="field field-acompanante hidden" id="campoAcompanante">
+          <span>Nombre de tu acompañante</span>
+          <input type="text" name="acompanante" placeholder="Nombre completo">
+        </label>
+
+        <fieldset class="field field-radio">
+          <legend>¿Necesitas autobús?</legend>
+          <label><input type="radio" name="autobus" value="si"> Sí</label>
+          <label><input type="radio" name="autobus" value="no"> No</label>
+        </fieldset>
+
+        <label class="field field-autobus hidden" id="campoAutobus">
+          <span>Número de plazas de autobús</span>
+          <input type="number" name="plazasAutobus" min="1" placeholder="Ej. 2">
+        </label>
+
+        <label class="field">
+          <span>Intolerancias o alergias alimentarias</span>
+          <input type="text" name="intolerancias" placeholder="Si no tienes, déjalo en blanco">
+        </label>
+
+        <label class="field">
+          <span>Sugerencia de canción para la fiesta</span>
+          <input type="text" name="cancion" placeholder="Título y artista">
+        </label>
+
+        <label class="field">
+          <span>¿Algo que queráis contarnos?</span>
+          <textarea name="nota" rows="3" placeholder="Cualquier cosa que necesitéis comunicarnos"></textarea>
+        </label>
+
+        <button type="submit" class="btn-submit">Enviar confirmación</button>
+      </form>
+
+      <p class="rsvp-confirm hidden" id="rsvpConfirm">¡Gracias! Hemos recibido tu confirmación <svg class="rsvp-confirm-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 815 576.24"><path d="M812.63,0l2.37,572.88-812.63,3.36L0,3.36,812.63,0ZM416.13,360.62c29.23-15.03,55.69-30.83,83.43-47.58l139.9-84.49c39.53-23.87,65.89-42.67,90.78-83.1l33.64-54.62c12.99-21.09,29.83-67.18,18.07-77.72-2.21-1.98-7.56-4.77-11.84-4.75L36.62,11.55c-4.96.02-10.05,3.47-11.84,6.23-6.91,10.66,5.08,54.47,11.23,75.41,6.75,22.99,17.44,43.21,32.5,61.84,34.03,42.1,84.36,75.71,132.27,101.34l90.79,48.56,99.59,55.88c7.56,4.24,16.83,4,24.98-.19ZM541.08,310.84l64.96,54.11,136.97,114.35,57.58,50.77c1.6,1.41,5.45-2.7,5.44-5.64l-1.86-505.37c-1.83-.58-4.16-.89-4.53,0l-1.27,3.01c-3.09,23.35-10.76,44.19-21.65,64.97l-37.98,65.49-38.13,45.51c-14.89,17.77-33.32,28.91-53.71,39.54-36.89,19.23-71.34,40.43-107.01,61.84-1.26.76-3.11,4.4-2.73,5.81s2.13,4.13,3.91,5.62ZM271.31,303.42l-42.41-24.35-72.3-38.71c-38.65-20.69-71-49.96-99.15-83.16-15.72-18.54-24.68-39.04-30.92-62.29-6.54-24.37-8.81-49.29-17.9-73.21l2.82,447.33,2.05,75.09,20.64-21.12,110.52-97.47,128.2-109.68c1.71-1.46,3.42-5.52,3.03-7.31-.33-1.49-2.63-3.99-4.58-5.11ZM32.22,539.82c-6.4,5.81-10.1,15.03-6.9,22.59,1.95,2.89,8.93,4.56,13.78,4.52l755.83-5.95c5.05-9.75.84-20.2-7.63-27.41l-256.12-217.85c-4-3.4-9.71-5.98-14.29-3.29l-101.81,59.81c-6.03,3.54-13.14,3.31-19.44.66l-101.59-57.16c-1.99-.52-7-.58-8.54.76l-176.8,153.83-76.48,69.5Z"/></svg></p>
+    </section>
+
+    <section class="section countdown-section" id="cuenta-regresiva">
+      <h2 class="section-title">Cuenta atrás</h2>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item reveal reveal-pop">
+          <span id="cd-dias">00</span>
+          <label>días</label>
+        </div>
+        <div class="countdown-item reveal reveal-pop">
+          <span id="cd-horas">00</span>
+          <label>horas</label>
+        </div>
+        <div class="countdown-item reveal reveal-pop">
+          <span id="cd-min">00</span>
+          <label>min</label>
+        </div>
+        <div class="countdown-item reveal reveal-pop">
+          <span id="cd-seg">00</span>
+          <label>seg</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <p class="contact-question">¿Queréis contactar con nosotros?</p>
+
+      <button class="contact-toggle-link" id="contactToggle" aria-expanded="false" aria-controls="contactPanelWrap">
+        <span>Ver teléfonos</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="contact-panel-wrap" id="contactPanelWrap">
+        <div class="contact-panel" id="contactPanel">
+          <p class="contact-item-inline"><span class="contact-name">María</span> · <a href="tel:+34637725856">637 725 856</a></p>
+          <p class="contact-item-inline"><span class="contact-name">Bruno</span> · <a href="tel:+34619875835">619 875 835</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer-names">María &amp; Bruno</p>
+      <p class="footer-date">17 · 10 · 2026</p>
+    </footer>
+
+  <div class="decorative-flowers-bottom">
+    <img src="assets/img/ilustracion-flores-2.svg" alt="Decoración floral" loading="lazy">
+  </div>
+
+  </main>
+
+  <!-- Música de fondo (oculta) -->
+  <div id="ytPlayer" aria-hidden="true"></div>
+
+  <script src="https://www.youtube.com/iframe_api" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
