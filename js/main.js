@@ -51,6 +51,7 @@ function initYouTubePlayer() {
     events: {
       onReady: () => {
         ytReady = true;
+        ytPlayer.playVideo();
         if (musicRequested) startMusicPlayback();
       },
       onStateChange: (e) => {
@@ -65,12 +66,16 @@ function initYouTubePlayer() {
 
 window.onYouTubeIframeAPIReady = initYouTubePlayer;
 
-setTimeout(() => {
-  if (!ytPlayer && window.YT && window.YT.Player) initYouTubePlayer();
-}, 2000);
+const ytPollInterval = setInterval(() => {
+  if (ytPlayer) {
+    clearInterval(ytPollInterval);
+  } else if (window.YT && window.YT.Player) {
+    initYouTubePlayer();
+    clearInterval(ytPollInterval);
+  }
+}, 100);
 
 function startMusicPlayback() {
-  ytPlayer.playVideo();
   ytPlayer.unMute();
   ytPlayer.setVolume(100);
 }
@@ -79,6 +84,16 @@ function playMusic() {
   musicRequested = true;
   if (ytReady) startMusicPlayback();
 }
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState !== 'visible') return;
+  if (!musicRequested || !ytReady) return;
+
+  const state = ytPlayer.getPlayerState();
+  if (state !== YT.PlayerState.PLAYING && state !== YT.PlayerState.BUFFERING) {
+    ytPlayer.playVideo();
+  }
+});
 
 function revealContent() {
   if (!opened) return;
