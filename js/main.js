@@ -220,3 +220,15 @@ contactToggle.addEventListener('click', () => {
   contactToggle.setAttribute('aria-expanded', String(isOpen));
   contactToggle.querySelector('span').textContent = isOpen ? 'Ocultar teléfonos' : 'Ver teléfonos';
 });
+
+/* ---------- Regalo ---------- */
+
+const giftToggle = document.getElementById('giftToggle');
+const giftPanelWrap = document.getElementById('giftPanelWrap');
+
+giftToggle.addEventListener('click', () => {
+  const isOpen = giftPanelWrap.classList.toggle('open');
+  giftToggle.classList.toggle('open', isOpen);
+  giftToggle.setAttribute('aria-expanded', String(isOpen));
+  giftToggle.querySelector('span').textContent = isOpen ? 'Ocultar IBAN' : 'Ver IBAN';
+});

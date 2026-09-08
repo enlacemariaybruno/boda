@@ -585,6 +585,58 @@ main {
   transform: translateY(-2px);
 }
 
+/* Autobús */
+
+.section-title-wrap {
+  white-space: normal;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.3;
+}
+
+.transport-times {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.time-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 220px;
+  max-width: 100%;
+}
+
+.time-item label {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.time-item span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--marron);
+}
+
+/* Regalo */
+
+.gift-section {
+  padding-top: 1rem;
+}
+
+.gift-section .contact-question {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
 /* Contacto */
 
 .contact-section {
@@ -860,6 +912,10 @@ main {
   .location-time { font-size: 1.35rem !important; }
   .location-note { font-size: 0.9rem !important; }
   .location-link { font-size: 0.95rem; padding: 0.65rem 1.6rem; }
+
+  .time-item { width: 260px; }
+  .time-item span { font-size: 1.5rem; }
+  .time-item label { font-size: 1rem; }
 
   .field span,
   .field-radio legend { font-size: 1.15rem; }
