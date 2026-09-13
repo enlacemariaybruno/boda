@@ -917,6 +917,8 @@ main {
   .time-item span { font-size: 1.5rem; }
   .time-item label { font-size: 1rem; }
 
+  .section-title-wrap { max-width: min(88vw, 750px); }
+
   .field span,
   .field-radio legend { font-size: 1.15rem; }
 
