@@ -624,6 +624,47 @@ main {
   color: var(--marron);
 }
 
+.time-item-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  max-width: 100%;
+}
+
+.time-item-group .time-item {
+  width: 100%;
+}
+
+.transport-pickup {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+.transport-stops {
+  margin-top: 1.4rem;
+  text-align: center;
+}
+
+.transport-stops-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin: 0 0 0.5rem;
+}
+
+.transport-stops-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+  color: var(--marron);
+  line-height: 1.6;
+}
+
 /* Regalo */
 
 .gift-section {
